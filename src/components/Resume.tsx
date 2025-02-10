@@ -14,7 +14,7 @@ const Resume: React.FC = () => {
       >
         {/* Display PPTX from OneDrive - Ensure to replace with your OneDrive embed link */}
         <iframe
-        src="https://docs.google.com/presentation/d/1aWYF1fwVcUWfRbRoVxqLBGNbO8Bcn8_3/embed?start=true&loop=true&delayms=3000"
+        src="https://docs.google.com/presentation/d/1N-bVsvUM4LE6bjb2ytK4nfiJfLmhI2Xp/embed?start=true&loop=true&delayms=3000"
         width="100%"
         height="100%"
         className="w-full h-full"
