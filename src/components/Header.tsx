@@ -25,9 +25,9 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-gray-800 text-white p-4 shadow-lg z-50 flex justify-between items-center px-6 lg:px-12">
+    <header className="fixed top-0 w-full bg-gray-800 text-white p-4 shadow-lg z-50 flex flex-wrap justify-between items-center px-4 sm:px-6 lg:px-12">
       <nav className="w-full">
-        <ul className="flex flex-wrap justify-center space-x-2 sm:space-x-4 md:space-x-8 lg:space-x-12 text-sm sm:text-base md:text-lg">
+        <ul className="flex flex-wrap justify-center space-x-2 sm:space-x-4 md:space-x-6 lg:space-x-8 text-xs sm:text-sm md:text-base lg:text-lg">
           <li>
             <Link to="/" onClick={(e) => handleNavigation(e, "home")} className="hover:text-blue-400">
               Home
