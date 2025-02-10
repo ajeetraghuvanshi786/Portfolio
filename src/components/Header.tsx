@@ -1,25 +1,22 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Header: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // **Function to handle menu navigation**
   const handleNavigation = (event: React.MouseEvent, section: string) => {
     event.preventDefault();
-
     if (location.pathname !== "/") {
-      // If not on the home page, navigate to home first
       navigate("/");
       setTimeout(() => {
         const element = document.getElementById(section);
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
-      }, 300); // Allow time for navigation before scrolling
+      }, 300);
     } else {
-      // If already on the home page, just scroll
       const element = document.getElementById(section);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
@@ -28,9 +25,9 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-gray-800 text-white p-4 shadow-lg z-50 flex justify-center">
-      <nav className="container mx-auto flex flex-col items-center text-center">
-        <ul className="flex space-x-8 justify-center">
+    <header className="fixed top-0 w-full bg-gray-800 text-white p-4 shadow-lg z-50 flex justify-between items-center px-6 lg:px-12">
+      <nav className="w-full">
+        <ul className="flex flex-wrap justify-center space-x-2 sm:space-x-4 md:space-x-8 lg:space-x-12 text-sm sm:text-base md:text-lg">
           <li>
             <Link to="/" onClick={(e) => handleNavigation(e, "home")} className="hover:text-blue-400">
               Home
