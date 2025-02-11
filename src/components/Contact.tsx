@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"; // Importing official icons
 
 const contactIcons = [
-  { icon: "✉️", link: "mailto:dsajeet2024@gmail.com" },
-  { icon: "🔗", link: "https://linkedin.com/in/ajeet-raghuvanshi-579725327" },
-  { icon: "🐱", link: "https://github.com/ajeetraghuvanshi786" },
+  { icon: <FaEnvelope className="text-5xl text-gray-800" />, link: "mailto:dsajeet2024@gmail.com" },
+  { icon: <FaLinkedin className="text-5xl text-blue-600" />, link: "https://linkedin.com/in/ajeet-raghuvanshi-579725327" },
+  { icon: <FaGithub className="text-5xl text-gray-900" />, link: "https://github.com/ajeetraghuvanshi786" },
 ];
 
 const iconVariants = {
@@ -38,7 +39,7 @@ const Contact: React.FC = () => {
             href={contact.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-5xl bg-white text-gray-800 p-6 rounded-full shadow-lg transition-all duration-300 hover:bg-gray-200 hover:shadow-2xl"
+            className="p-6 rounded-full bg-white shadow-lg transition-all duration-300 hover:bg-gray-200 hover:shadow-2xl flex items-center justify-center"
             variants={iconVariants}
             whileHover="hover"
           >
