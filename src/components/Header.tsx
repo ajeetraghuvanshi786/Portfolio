@@ -36,11 +36,8 @@ const Header: React.FC = () => {
   return (
     <header className="fixed top-0 w-full bg-gray-800 text-white p-4 shadow-lg z-50">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Logo or Brand */}
-        <h1 className="text-xl font-bold">PORTFOLIO</h1>
-
         {/* Desktop Menu - Shown only on md+ screens */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex space-x-8 justify-center w-full">
           <a href="#home" onClick={(e) => handleNavigation(e, "home")} className="hover:text-blue-400">Home</a>
           <a href="#about" onClick={(e) => handleNavigation(e, "about")} className="hover:text-blue-400">About</a>
           <a href="#experience" onClick={(e) => handleNavigation(e, "experience")} className="hover:text-blue-400">Experience</a>
